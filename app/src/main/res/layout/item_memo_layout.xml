@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent" android:layout_height="wrap_content"
+    android:padding="5dp">
+    <ImageView
+        android:layout_width="@dimen/item_memo_height"
+        android:layout_height="@dimen/item_memo_height"
+        android:src="@drawable/ic_normal_event"
+        android:id="@+id/iv_memo"/>
+    <TextView
+        android:layout_width="280dp"
+        android:layout_height="@dimen/item_memo_height"
+        android:layout_toEndOf="@id/iv_memo"
+        android:layout_marginStart="3dp"
+        android:textSize="17sp"
+        android:text="欢迎来到Memo备忘录sdfsdfsdfsfsdfdsfd"
+        android:singleLine="true"
+        android:ellipsize="end"
+        android:gravity="center_vertical"
+        android:id="@+id/tv_title"/>
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/item_memo_height"
+        android:layout_toEndOf="@id/tv_title">
+        <ImageView
+            android:layout_width="@dimen/item_memo_height"
+            android:layout_height="@dimen/item_memo_height"
+            android:src="@drawable/ic_edit"
+            android:layout_alignParentEnd="true"
+            android:id="@+id/iv_edit"/>
+    </RelativeLayout>
+</RelativeLayout>
