@@ -10,7 +10,6 @@ import cn.jsbintask.memo.MemoApplication;
  * @author jsbintask@gmail.com
  * @date 2018/4/25 14:59
  */
-
 public class DBOpenHelper extends SQLiteOpenHelper {
     private static final String TAG = DBOpenHelper.class.getSimpleName();
     private static final int VERSION = 1;
@@ -36,7 +35,13 @@ public class DBOpenHelper extends SQLiteOpenHelper {
 
         String sql = "INSERT INTO " + ColumnContacts.EVENT_TABLE_NAME + " VALUES(NULL, ?, ?, ?, ?, ?, ?, ?)";
         db.beginTransaction();
-        db.execSQL(sql, new Object[]{"欢迎使用Memo", "Memo是一款快速，方便的便签管理器！您可以方便的记录您每天的日常，并且管理它们。", "2018-04-25 17:28:23", "2018-04-25 17:28", "2018-04-25 17:28", 0, 0});
+        db.execSQL(sql, new Object[]{"jsbintask->memo",
+                "Memo是一个小巧方便带有闹铃功能的记事本app，主要使用butterknife和recycleview，clockmanager构建\n" +
+                        "git地址：https://github.com/jsbintask22/memo.git",
+                "2018-04-25 17:28:23",
+                "2018-04-25 17:28",
+                "2018-04-25 17:28",
+                0, 0});
         db.setTransactionSuccessful();
         db.endTransaction();
     }
